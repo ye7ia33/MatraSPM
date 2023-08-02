@@ -52,7 +52,7 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OfferTableViewCell") as? OfferTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OfferTableViewCell", for: indexPath) as? OfferTableViewCell
 //        cell?.offerImg = image
         return cell ?? UITableViewCell()
     }
