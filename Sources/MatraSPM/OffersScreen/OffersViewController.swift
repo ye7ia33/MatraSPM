@@ -14,7 +14,7 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     var list: [Model]?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: .module)
+        super.init(nibName: "OffersViewController", bundle: .module)
     }
     
     required init?(coder: NSCoder) {
@@ -24,15 +24,15 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         list = [Model.init()]
-        
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         self.view.backgroundColor = .red
         self.tableview.register(UINib(nibName: "OfferTableViewCell", bundle: .module), forCellReuseIdentifier: "OfferTableViewCell")
         self.tableview.dataSource = self
         self.tableview.delegate = self
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableview.reloadData()
     }
 //    func remoteConfig() {
 //        let fixedAppId = "Ho5S!688d$Y#s325%zdkVwC%#4Tq%X4J8df"
