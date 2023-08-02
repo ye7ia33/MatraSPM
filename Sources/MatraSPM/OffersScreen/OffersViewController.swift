@@ -8,11 +8,11 @@
 import UIKit
 //import SwiftyJSON
 
-public class OffersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class OffersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableview: UITableView!
     var list: [Model]?
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         list = [Model.init()]
         self.view.backgroundColor = .red
@@ -34,11 +34,11 @@ public class OffersViewController: UIViewController, UITableViewDataSource, UITa
 //        }
 //    }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.list?.count ?? 0
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OfferTableViewCell") as? OfferTableViewCell
 //        cell?.offerImg = image
         return cell ?? UITableViewCell()
