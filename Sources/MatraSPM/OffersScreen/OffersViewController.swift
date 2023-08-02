@@ -15,12 +15,16 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         list = [Model.init()]
+        
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.view.backgroundColor = .red
         self.tableview.register(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferTableViewCell")
         self.tableview.dataSource = self
         self.tableview.delegate = self
     }
-
 //    func remoteConfig() {
 //        let fixedAppId = "Ho5S!688d$Y#s325%zdkVwC%#4Tq%X4J8df"
 //        if let url = URL(string: "https://api.npoint.io/d8bf15ae6c871246c643") {
