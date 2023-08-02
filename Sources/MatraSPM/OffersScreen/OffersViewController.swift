@@ -12,6 +12,15 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var tableview: UITableView!
     var list: [Model]?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: .module)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         list = [Model.init()]
