@@ -30,7 +30,7 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.view.backgroundColor = .red
-        self.tableview.register(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferTableViewCell")
+        self.tableview.register(UINib(nibName: "OfferTableViewCell", bundle: .module), forCellReuseIdentifier: "OfferTableViewCell")
         self.tableview.dataSource = self
         self.tableview.delegate = self
     }

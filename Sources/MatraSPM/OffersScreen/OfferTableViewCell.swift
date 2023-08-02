@@ -10,6 +10,7 @@ import UIKit
 class OfferTableViewCell: UITableViewCell {
 
     @IBOutlet weak var offerImg: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
