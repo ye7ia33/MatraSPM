@@ -15,6 +15,7 @@ public class OffersViewController: UIViewController, UITableViewDataSource, UITa
     public override func viewDidLoad() {
         super.viewDidLoad()
         list = [Model.init()]
+        self.view.backgroundColor = .red
         self.tableview?.register(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferTableViewCell")
         self.tableview?.dataSource = self
         self.tableview?.delegate = self
