@@ -10,14 +10,14 @@ import UIKit
 
 public class OffersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var tableview: UITableView?
     var list: [Model]?
     public override func viewDidLoad() {
         super.viewDidLoad()
         list = [Model.init()]
-        self.tableview.register(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferTableViewCell")
-        self.tableview.dataSource = self
-        self.tableview.delegate = self
+        self.tableview?.register(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferTableViewCell")
+        self.tableview?.dataSource = self
+        self.tableview?.delegate = self
     }
 
 //    func remoteConfig() {
