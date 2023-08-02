@@ -14,8 +14,7 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     var list: [Model]?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: "OffersViewController",
-                   bundle: .init(for: Self.self))
+        super.init(nibName: "OffersViewController", bundle: .module)
     }
     
     required init?(coder: NSCoder) {
@@ -26,7 +25,7 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         list = [Model.init()]
         self.view.backgroundColor = .red
-        let nib = UINib(nibName: "OfferTableViewCell", bundle: .module)
+        let nib = UINib(nibName: "OfferTableViewCell", bundle: .init(for: Self.self))
         self.tableview.register(nib, forCellReuseIdentifier: "OfferTableViewCell")
         self.tableview.dataSource = self
         self.tableview.delegate = self
