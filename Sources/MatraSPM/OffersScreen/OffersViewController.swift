@@ -14,7 +14,7 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     var list: [Model]?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: "OffersViewController", bundle: .module)
+        super.init(nibName: nibNameOrNil, bundle: .module)
     }
     
     required init?(coder: NSCoder) {
