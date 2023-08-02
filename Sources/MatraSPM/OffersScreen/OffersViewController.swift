@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+//import SwiftyJSON
 
 class OffersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
