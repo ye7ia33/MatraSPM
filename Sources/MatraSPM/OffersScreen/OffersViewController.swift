@@ -8,11 +8,11 @@
 import UIKit
 //import SwiftyJSON
 
-class OffersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+public class OffersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableview: UITableView!
     var list: [Model]?
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         list = [Model.init()]
         self.tableview.register(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferTableViewCell")
@@ -33,11 +33,11 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
 //        }
 //    }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.list?.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OfferTableViewCell") as? OfferTableViewCell
 //        cell?.offerImg = image
         return cell ?? UITableViewCell()
